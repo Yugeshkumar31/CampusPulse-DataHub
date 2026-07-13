@@ -1,0 +1,23 @@
+# ============================================================
+#  CampusPulse - Python Requirements
+#  Install all dependencies with:
+#      pip install -r requirements.txt
+#
+#  Note: PySpark (spark_etl.py) runs inside Docker.
+#        Java 8+ must be installed separately if running
+#        PySpark locally outside Docker.
+# ============================================================
+
+# --- Data Generation ---
+Faker==40.11.1            # Synthetic student / library data generation
+
+# --- Data Processing & Analysis ---
+pandas==2.3.3             # DataFrames, CSV I/O, merging datasets
+numpy==2.3.4              # Numerical operations (pandas dependency)
+
+# --- Database ---
+psycopg2-binary==2.9.11   # PostgreSQL adapter (used in load_to_postgres.py)
+SQLAlchemy==2.0.41        # ORM / engine for pandas .to_sql() uploads
+
+# --- Big Data / ETL (optional - runs inside Docker via spark_etl.py) ---
+pyspark==3.5.5            # Spark ETL pipeline for large-scale CSV processing

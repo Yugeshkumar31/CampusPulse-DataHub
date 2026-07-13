@@ -1,0 +1,2 @@
+-- SQL queries for CampusPulse
+-- Common analytical and operational queries

@@ -1,0 +1,51 @@
+# ============================================================
+#  CampusPulse — .gitignore
+# ============================================================
+
+# --- Virtual Environment ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Generated Data Files (regeneratable via generate_data.py) ---
+data/raw/
+data/processed/
+
+# --- Spark Artifacts ---
+**/_SUCCESS
+**/*.crc
+**/.part-*
+
+# --- Python Cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# --- Environment Variables / Secrets ---
+.env
+*.env
+.env.*
+
+# --- Database credentials (never commit these) ---
+*.pem
+*.key
+
+# --- OS & Editor junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
+
+# --- Jupyter Notebooks (optional: remove if you have notebooks to share) ---
+.ipynb_checkpoints/
+
+# --- Distribution / Build ---
+dist/
+build/
+*.egg-info/

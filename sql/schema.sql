@@ -1,0 +1,2 @@
+-- Database schema for CampusPulse
+-- Define tables and relationships here
