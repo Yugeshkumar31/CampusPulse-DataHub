@@ -309,7 +309,7 @@ Apache Spark is executed inside a Docker container, providing an isolated and re
 ### 🗄️ PostgreSQL Dimension Table
 
 <p align="center">
-<img src="screenshots/postgres_dimension.png" width="900"/>
+<img src="screenshots/postgres_dimensiontable.png" width="900"/>
 </p>
 
 The **dim_students** table stores descriptive information about students, including department and academic year.
