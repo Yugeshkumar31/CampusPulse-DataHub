@@ -112,15 +112,39 @@ Synthetic Data Generation (Python)
 ```
 
 ---
+# 🏛️ Data Warehouse Design
 
+The project follows a **Star Schema** for efficient analytical querying.
+
+```
+                 dim_students
+                      │
+                      │
+                      ▼
+               fact_library
+```
+
+**Dimension Table (`dim_students`)**
+
+- Student ID
+- Name
+- Department
+- Academic Year
+
+**Fact Table (`fact_library`)**
+
+- Student ID
+- Duration
+- Hour
+---
 # 🚀 Installation & Setup
 
 ## 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/Yugeshkumar31/CampusPulse.git
+git clone https://github.com/Yugeshkumar31/CampusPulse-DataHub.git
 
-cd CampusPulse
+cd CampusPulse-DataHub
 ```
 
 ---
@@ -241,7 +265,7 @@ to analyze
 Open
 
 ```
-dashboard/CampusPulse.pbix
+dashboard/CampusPulseDashboard.pbix
 ```
 
 Refresh the PostgreSQL connection.
@@ -252,40 +276,82 @@ Explore the dashboard interactively.
 
 # 📷 Screenshots
 
+### 🏗️ Project Architecture
+
 <p align="center">
-
 <img src="screenshots/architecture.png" width="900"/>
-
-<br><br>
-
-<img src="screenshots/raw_dataset.png" width="900"/>
-
-<br><br>
-
-<img src="screenshots/spark_etl_execution.png" width="900"/>
-
-<br><br>
-
-<img src="screenshots/postgresql_tables.png" width="900"/>
-
-<br><br>
-
-<img src="screenshots/sql_peak_usage.png" width="900"/>
-
-<br><br>
-
-<img src="screenshots/dashboard.png" width="900"/>
-
 </p>
+
+Illustrates the complete end-to-end data engineering pipeline from synthetic data generation to business intelligence visualization.
+
+---
+
+### ⚡ Apache Spark ETL Pipeline
+
+<p align="center">
+<img src="screenshots/spark_etl.png" width="900"/>
+</p>
+
+Apache Spark performs Extract, Transform, and Load (ETL) operations, including data cleaning, feature engineering, and preparation for analytical storage.
+
+---
+
+### 🐳 Dockerized Spark Environment
+
+<p align="center">
+<img src="screenshots/docker.png" width="900"/>
+</p>
+
+Apache Spark is executed inside a Docker container, providing an isolated and reproducible environment for scalable data processing.
+
+---
+
+### 🗄️ PostgreSQL Dimension Table
+
+<p align="center">
+<img src="screenshots/postgres_dimension.png" width="900"/>
+</p>
+
+The **dim_students** table stores descriptive information about students, including department and academic year.
+
+---
+
+### 🗄️ PostgreSQL Fact Table
+
+<p align="center">
+<img src="screenshots/postgres_facttable.png" width="900"/>
+</p>
+
+The **fact_library** table stores analytical measures such as resource usage duration and hourly activity, forming the fact table of the Star Schema.
+
+---
+
+### 📊 SQL Analytics
+
+<p align="center">
+<img src="screenshots/sql_queries.png" width="900"/>
+</p>
+
+Analytical SQL queries are executed to identify peak usage hours, department-wise utilization, average engagement duration, and other business insights.
+
+---
+
+### 📈 Power BI Dashboard
+
+<p align="center">
+<img src="screenshots/dashboard.png" width="900"/>
+</p>
+
+Interactive dashboard providing insights into campus resource utilization, department-wise activity, peak usage trends, engagement analysis, and underutilized time slots.
 ---
 
 # 📂 Project Structure
 
 ```text
-CampusPulse/
+CampusPulse-DataHub/
 │
 ├── dashboard/
-│   └── CampusPulse.pbix
+│   └── CampusPulseDashboard.pbix
 │
 ├── data/
 │   ├── raw/
@@ -308,6 +374,13 @@ CampusPulse/
 │   └── queries.sql
 │
 ├── screenshots/
+│  ├── architecture.png
+│  ├── spark_etl.png
+│  ├── docker.png
+│  ├── postgres_dimension.png
+│  ├── postgres_facttable.png
+│  ├── sql_queries.png
+│  └── dashboard.png
 │
 ├── README.md
 ├── requirements.txt
