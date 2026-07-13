@@ -258,30 +258,25 @@ Explore the dashboard interactively.
 
 <br><br>
 
-<img src="screenshots/raw_data.png" width="900"/>
+<img src="screenshots/raw_dataset.png" width="900"/>
 
 <br><br>
 
-<img src="screenshots/spark_etl.png" width="900"/>
+<img src="screenshots/spark_etl_execution.png" width="900"/>
 
 <br><br>
 
-<img src="screenshots/docker.png" width="900"/>
+<img src="screenshots/postgresql_tables.png" width="900"/>
 
 <br><br>
 
-<img src="screenshots/postgres_tables.png" width="900"/>
-
-<br><br>
-
-<img src="screenshots/sql_queries.png" width="900"/>
+<img src="screenshots/sql_peak_usage.png" width="900"/>
 
 <br><br>
 
 <img src="screenshots/dashboard.png" width="900"/>
 
 </p>
-
 ---
 
 # 📂 Project Structure
